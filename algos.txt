@@ -1,0 +1,40 @@
+
+fonction decrypterCesarForceBrute(message:chaine)
+debut
+    alphabet <- "abcdefghijklmnopqrstuvwxyz"
+    pour i de 1 a taille(alphabet) faire
+        messageDechiffre <- ""
+        pour j de 1 a taille(message) faire
+            si message[j] est dans alphabet alors
+                messageDechiffre <- messageDechiffre + alphabet[(position(message[j], alphabet) - i) mod taille(alphabet)]
+            sinon
+                messageDechiffre <- messageDechiffre + message[j]
+        ecrire(messageDechiffre)
+    finpour
+
+
+
+fonctuin decrypterVigener(message : chaine, key : chaine) 
+debut
+	alphabet 'abcdefghijklmnopqrstuvwxyz'
+	messageDechiffre <- ''
+	pour i de 1 a taille(message) faire 
+		si tabContenir(alphabet,message[i])
+			alors messageDechiffre <- messageDechiffre +  alphabet[tabIndice(alphabet,message[i]) - tabIndice(alphabet,cle [i% taille(cle)])) % taille(alphabet)]
+			sinon messageDechiffre <- messageDechiffre +message[i])
+	imprimer 'messsage decrypte : ', messageDecrypte
+
+
+fonction decrypterAffine(message,a,b) :
+debut
+	alphabet <- 'abcdefghiklmnopqrstuvwxyz'
+    messageDechiffre <- ''
+    table <- tabCreer(26)
+    pour i de 1 a taille(alphabet) faire
+        table[i] <- alphabet[(a*i+b)%taille(alphabet)]
+    pour i de 1 a taille(message) faire
+        si tabContenir(alphabet,message[i])
+            alors messageDechiffre <- messageDechiffre +table[tabIndice(alphabet,message[i])])
+            sinon messageDechiffre <- messageDechiffre +message[i])
+    imprimer 'message decrypte : ', messageDechiffre
+fin 
