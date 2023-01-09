@@ -1,2 +1,2 @@
 # CryptographieBasics
-little python graphical app to resolve / crypt with beginner method like cesar or vigenere
+crypto dump, mini tools to avoid wasting so much time when learning basic crypto.
